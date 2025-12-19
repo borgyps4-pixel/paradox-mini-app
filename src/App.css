@@ -1,0 +1,67 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+h1, h2 {
+  color: var(--tg-theme-text-color, #ffffff);
+}
+
+p {
+  color: var(--tg-theme-hint-color, #aaaaaa);
+  font-size: 1.1rem;
+}
+
+button {
+  background-color: var(--tg-theme-button-color, #2481cc);
+  color: var(--tg-theme-button-text-color, #ffffff);
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.1s;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.option-btn {
+  background-color: var(--tg-theme-secondary-bg-color, #2c2c2c);
+  color: var(--tg-theme-text-color, #ffffff);
+  margin: 8px 0;
+  text-align: left;
+}
+
+.blurred-box {
+  background: #222;
+  padding: 20px;
+  border-radius: 12px;
+  filter: blur(4px);
+  user-select: none;
+  margin: 20px 0;
+}
+
+.unlock-btn {
+  background-color: #e74c3c; /* Red for attention */
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
