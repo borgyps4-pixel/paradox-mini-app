@@ -133,7 +133,7 @@ function App() {
     );
   }
 
-  if (step === 5) {
+    if (step === 5) {
     return (
       <div className="container">
         <h1>{finalResult.title}</h1>
@@ -155,8 +155,8 @@ function App() {
 
         <button onClick={() => window.location.reload()}>Retake Test</button>
       </div>
-    );
+    	);
+     }
   }
-}
 
 export default App
