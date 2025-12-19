@@ -71,7 +71,7 @@ function App() {
 
   const showRewardAd = () => {
     setIsAdLoading(true);
-    // Replace 123456 with your REAL zone ID function
+    // Replace 10349192 with your REAL zone ID function
     if (typeof window.show_10349192 === 'function') {
       window.show_10349192()
         .then(() => {
@@ -133,41 +133,30 @@ function App() {
     );
   }
 
-    if (step === 5) {
+  if (step === 5) {
     return (
       <div className="container">
         <h1>{finalResult.title}</h1>
         <p className="result-desc">{finalResult.desc}</p>
         
-        {/* NEW SHARE BUTTON START */}
+        {/* SHARE BUTTON */}
         <button 
           onClick={() => {
             const message = `I am ${finalResult.title}. Find out your Shadow Trait here:`;
             WebApp.switchInlineQuery(message, ['users']);
           }}
           style={{ 
-            backgroundColor: '#0088cc', /* Telegram Blue */
+            backgroundColor: '#0088cc', 
             marginBottom: '15px' 
           }}
         >
           Share Result 🚀
         </button>
-        {/* NEW SHARE BUTTON END */}
 
         <button onClick={() => window.location.reload()}>Retake Test</button>
       </div>
     );
   }
-
-
-    return (
-      <div className="container">
-        <h1>{finalResult.title}</h1>
-        <p className="result-desc">{finalResult.desc}</p>
-        <button onClick={() => window.location.reload()}>Retake Test</button>
-      </div>
-    );
-  }
-
+}
 
 export default App
